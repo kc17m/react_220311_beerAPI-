@@ -3,11 +3,29 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from "./components/Home"
+import Random from "./components/random"
+import Gallery from "./components/gallery"
+import Details from "./components/Details"
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+
+  <BrowserRouter>
+    <React.StrictMode>
+      <Routes>
+        <Route path="/" element={<App />} />
+        <Route path="/gallery" element={<Gallery />} />
+        <Route path="/random" element={<Random />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/gallery/:beerId" element={<Details />} />
+        <Route path="/random" element={<Random />} />
+
+
+      </Routes>
+    </React.StrictMode>
+  </BrowserRouter>
+  ,
   document.getElementById('root')
 );
 
