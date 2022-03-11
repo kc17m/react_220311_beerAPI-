@@ -1,6 +1,8 @@
 import Nav from "./Navigation"
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
+import arrow from "../arrow-left-circle.svg";
+import { Link } from "react-router-dom";
 
 const Details = () => {
     let apiId = useParams("_id");
@@ -28,10 +30,11 @@ const Details = () => {
                 </figure>
                 <h2 className="name">{beerdetail.name}</h2>
                 <h4 className="tagline">{beerdetail.tagline}</h4>
-                <article className="flex"><h5>First brewed:</h5><h5>{beerdetail.first_brewed}</h5>
-                    <h5>{beerdetail.attenuation_level}</h5></article>
+                <article className="flex"><h5>First brewed:</h5><h5>{beerdetail.first_brewed}</h5></article>
+                <article className="flex"><h5>Attentuation Level: </h5> <h5> {beerdetail.attenuation_level}</h5></article>
                 <h5>{beerdetail.description}</h5>
-                <h6 className="contributed">{beerdetail.contributed_by.replace(/<.*>/, "")}</h6>
+
+                <Link to="/gallery"><img className="arrow" src={arrow} alt="arrow" /></Link>
             </section>
         </>
 
