@@ -1,3 +1,5 @@
+Deployed at: https://md-beer-api.netlify.app/ (mobile version only)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
