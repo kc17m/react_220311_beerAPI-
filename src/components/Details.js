@@ -6,18 +6,18 @@ import { Link } from "react-router-dom";
 
 const Details = () => {
     let apiId = useParams("_id");
-    console.log(apiId.beerId)
+    console.log(apiId)
 
     const [beerdetail, setBeerdetail] = useState([])
 
     useEffect(() => {
-        fetch(`https://ih-beers-api2.herokuapp.com/beers/${apiId.beerId}`)
+        fetch(`https://ih-beers-api2.herokuapp.com/beers/${apiId.id}`)
             .then(response => response.json())
             .then(data => {
                 console.log(data);
                 setBeerdetail(data)
             })
-    }, [])
+    }, [apiId])
 
 
 

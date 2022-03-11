@@ -26,12 +26,12 @@ const Gallery = () => {
 
             {beer.map((el, ind) => {
                 return (
-                    <section className="mainLayout">
+                    <section key={ind} className="mainLayout">
                         <div className="beerDetails" >
                             <div className="beerImg"  >
                                 <img src={el.image_url} alt="beer" />
                             </div>
-                            <div className="beerDescr" key={ind}>
+                            <div className="beerDescr" >
                                 <h2 className="name">{el.name}</h2>
                                 <h4 className="tagline">{el.tagline}</h4>
                                 <h6 className="contributed">{el.contributed_by.replace(/<.*>/, "")}</h6>

@@ -18,7 +18,7 @@ ReactDOM.render(
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/random" element={<Random />} />
         <Route path="/home" element={<Home />} />
-        <Route path="/gallery/:beerId" element={<Details />} />
+        <Route path="/gallery/:id" element={<Details />} />
         <Route path="/random" element={<Random />} />
 
 
